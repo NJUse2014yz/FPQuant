@@ -1,0 +1,144 @@
+<<<<<<< HEAD
+######################
+# Project Specific
+######################
+/FPQuant/target/www/**
+/FPQuant/src/test/javascript/coverage/
+/FPQuant/src/test/javascript/PhantomJS*/
+
+######################
+# Node
+######################
+/FPQuant/node/
+/FPQuant/node_tmp/
+/FPQuant/node_modules/
+/FPQuant/npm-debug.log.*
+
+######################
+# SASS
+######################
+/FPQuant/.sass-cache/
+
+######################
+# Eclipse
+######################
+/FPQuant/*.pydevproject
+/FPQuant/.project
+/FPQuant/.metadata
+/FPQuant/tmp/
+/FPQuant/tmp/**/*
+/FPQuant/*.tmp
+/FPQuant/*.bak
+/FPQuant/*.swp
+/FPQuant/*~.nib
+/FPQuant/local.properties
+/FPQuant/.classpath
+/FPQuant/.settings/
+/FPQuant/.loadpath
+/FPQuant/.factorypath
+/FPQuant/src/main/resources/rebel.xml
+
+# External tool builders
+/FPQuant/.externalToolBuilders/**
+
+# Locally stored "Eclipse launch configurations"
+/FPQuant/*.launch
+
+# CDT-specific
+/FPQuant/.cproject
+
+# PDT-specific
+/FPQuant/.buildpath
+
+######################
+# Intellij
+######################
+/FPQuant/.idea/
+/FPQuant/*.iml
+/FPQuant/*.iws
+/FPQuant/*.ipr
+/FPQuant/*.ids
+/FPQuant/*.orig
+
+######################
+# Visual Studio Code
+######################
+/FPQuant/.vscode/
+
+######################
+# Maven
+######################
+/FPQuant/log/
+/FPQuant/target/
+
+######################
+# Gradle
+######################
+/FPQuant/.gradle/
+/FPQuant/build/
+
+######################
+# Package Files
+######################
+/FPQuant/*.jar
+/FPQuant/*.war
+/FPQuant/*.ear
+/FPQuant/*.db
+
+######################
+# Windows
+######################
+# Windows image file caches
+/FPQuant/Thumbs.db
+
+# Folder config file
+/FPQuant/Desktop.ini
+
+######################
+# Mac OSX
+######################
+/FPQuant/.DS_Store
+/FPQuant/.svn
+
+# Thumbnails
+/FPQuant/._*
+
+# Files that might appear on external disk
+/FPQuant/.Spotlight-V100
+/FPQuant/.Trashes
+
+######################
+# Directories
+######################
+/FPQuant/bin/
+/FPQuant/deploy/
+
+######################
+# Logs
+######################
+/FPQuant/*.log
+
+######################
+# Others
+######################
+/FPQuant/*.class
+/FPQuant/*.*~
+/FPQuant/*~
+/FPQuant/.merge_file*
+
+######################
+# Gradle Wrapper
+######################
+!/FPQuant/gradle/wrapper/gradle-wrapper.jar
+
+######################
+# Maven Wrapper
+######################
+!/FPQuant/.mvn/wrapper/maven-wrapper.jar
+
+######################
+# ESLint
+######################
+/FPQuant/.eslintcache
+
+/AnyQuant_web/
