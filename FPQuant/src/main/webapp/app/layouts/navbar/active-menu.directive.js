@@ -15,15 +15,16 @@
 
         return directive;
 
+        // 隔离域中的连接函数
         function linkFunc(scope, element, attrs) {
             var language = attrs.activeMenu;
 
             scope.$watch(function() {
-                return $translate.use();
+                return $translate.use();//是否采用国际化
             }, function(selectedLanguage) {
                 if (language === selectedLanguage) {
-                    tmhDynamicLocale.set(language);
-                    element.addClass('active');
+                    tmhDynamicLocale.set(language);//设置语言
+                    element.addClass('active');//添加样式类active
                 } else {
                     element.removeClass('active');
                 }

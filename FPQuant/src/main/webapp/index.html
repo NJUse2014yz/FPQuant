@@ -22,8 +22,12 @@
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <!--丝带-->
     <page-ribbon></page-ribbon>
+    <!--导航栏，路由挂载点，应用加载时防止闪烁-->
+    <!--相关文件：app.state.js-->
     <div ui-view="navbar" ng-cloak></div>
+    <!--正文-->
     <div class="container">
         <div class="well" ui-view="content">
             <!-- Angular views -->

@@ -1,5 +1,6 @@
 <nav class="navbar navbar-default" role="navigation">
     <div class="container">
+        <!--导航栏头部-->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" ng-click="vm.toggleNavbar()">
                 <span class="sr-only">Toggle navigation</span>
@@ -7,20 +8,26 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            <!--LOGO-->
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
                 <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
                 <span data-translate="global.title">FPQuant</span> <span class="navbar-version">v{{VERSION}}</span>
             </a>
         </div>
+        <!--导航条-->
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
+            <!--导航栏列表-->
             <ul class="nav navbar-nav navbar-right">
+                <!--导航栏项：首页-->
                 <li ui-sref-active="active">
+                    <!--可点击的首页项-->
                     <a ui-sref="home" ng-click="vm.collapseNavbar()">
-                        <span class="glyphicon glyphicon-home"></span>
-                        <span class="hidden-sm" data-translate="global.menu.home">Home</span>
+                        <span class="glyphicon glyphicon-home"></span><!--图标-->
+                        <span class="hidden-sm" data-translate="global.menu.home">Home</span><!--名称-->
                     </a>
                 </li>
                 <!-- jhipster-needle-add-element-to-menu - JHipster will add new menu items here -->
+                <!--导航栏项：数据-->
                 <li ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" uib-dropdown class="dropdown pointer">
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="entity-menu">
                         <span>
@@ -31,52 +38,64 @@
                             <b class="caret"></b>
                         </span>
                     </a>
+                    <!--下拉列表-->
                     <ul class="dropdown-menu" uib-dropdown-menu>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                 </li>
+                <!--导航栏项：账号-->
                 <li ng-class="{active: vm.$state.includes('account')}" uib-dropdown class="dropdown pointer">
+                    <!--可点击的账号项-->
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="account-menu">
                         <span>
-                            <span class="glyphicon glyphicon-user"></span>
+                            <span class="glyphicon glyphicon-user"></span><!--人头-->
                             <span class="hidden-sm" data-translate="global.menu.account.main">
                                 Account
-                            </span>
-                            <b class="caret"></b>
+                            </span><!--账号-->
+                            <b class="caret"></b><!--下拉三角-->
                         </span>
                     </a>
+                    <!--下拉列表-->
                     <ul class="dropdown-menu" uib-dropdown-menu>
+                        <!--已激活：设置-->
                         <li ui-sref-active="active" ng-switch-when="true">
-                            <a ui-sref="settings" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;
-                                <span data-translate="global.menu.account.settings">Settings</span>
+                            <a ui-sref="settings" ng-click="vm.collapseNavbar()"><!--点击收起-->
+                                <span class="glyphicon glyphicon-wrench"></span>&nbsp;<!--图标-->
+                                <span data-translate="global.menu.account.settings">Settings</span><!--名称-->
                             </a>
                         </li>
+                        <!--已激活：密码-->
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="password" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-lock"></span>&nbsp;
                                 <span data-translate="global.menu.account.password">Password</span>
                             </a>
                         </li>
+                        <!--已激活：会话-->
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a ui-sref="sessions" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-cloud"></span>&nbsp;
                                 <span data-translate="global.menu.account.sessions">Sessions</span>
                             </a>
                         </li>
+                        <!--已激活：注销-->
                         <li ui-sref-active="active" ng-switch-when="true">
                             <a href="" ng-click="vm.logout()" id="logout">
                                 <span class="glyphicon glyphicon-log-out"></span>&nbsp;
                                 <span data-translate="global.menu.account.logout">Sign out</span>
                             </a>
                         </li>
+                        <!--未激活：登录-->
                         <li ui-sref-active="active" ng-switch-when="false">
+                            <!--点击调用login函数-->
                             <a href="" ng-click="vm.login()" id="login">
                                 <span class="glyphicon glyphicon-log-in"></span>&nbsp;
                                 <span data-translate="global.menu.account.login">Sign in</span>
                             </a>
                         </li>
+                        <!--未激活：注册-->
                         <li ui-sref-active="active" ng-switch-when="false">
+                            <!--点击跳转register-->
                             <a ui-sref="register" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-plus-sign"></span>&nbsp;
                                 <span data-translate="global.menu.account.register">Register</span>
@@ -84,51 +103,61 @@
                         </li>
                     </ul>
                 </li>
+                <!--导航栏项：管理（管理员状态下）-->
                 <li ng-class="{active: vm.$state.includes('admin')}"  ng-switch-when="true" has-authority="ROLE_ADMIN" uib-dropdown class="dropdown pointer">
+                    <!--可点击的管理项-->
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="admin-menu">
                         <span>
-                            <span class="glyphicon glyphicon-tower"></span>
-                            <span class="hidden-sm" data-translate="global.menu.admin.main">Administration</span>
-                            <b class="caret"></b>
+                            <span class="glyphicon glyphicon-tower"></span><!--图标-->
+                            <span class="hidden-sm" data-translate="global.menu.admin.main">Administration</span><!--名称-->
+                            <b class="caret"></b><!--下拉三角-->
                         </span>
                     </a>
+                    <!--下拉列表-->
                     <ul class="dropdown-menu" uib-dropdown-menu>
+                        <!--用户管理-->
                         <li ui-sref-active="active">
-                            <a ui-sref="user-management" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-user"></span>&nbsp;
-                                <span data-translate="global.menu.admin.userManagement">User management</span>
+                            <a ui-sref="user-management" ng-click="vm.collapseNavbar()"><!--点击收起-->
+                                <span class="glyphicon glyphicon-user"></span>&nbsp;<!--图标-->
+                                <span data-translate="global.menu.admin.userManagement">User management</span><!--名称-->
                             </a>
                         </li>
+                        <!--资源监控-->
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-metrics" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-dashboard"></span>&nbsp;
                                 <span data-translate="global.menu.admin.metrics">Metrics</span>
                             </a>
                         </li>
+                        <!--服务状态-->
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-health" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-heart"></span>&nbsp;
                                 <span data-translate="global.menu.admin.health">Health</span>
                             </a>
                         </li>
+                        <!--配置-->
                         <li ui-sref-active="active">
                             <a ui-sref="jhi-configuration" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
                                 <span data-translate="global.menu.admin.configuration">Configuration</span>
                             </a>
                         </li>
+                        <!--审核-->
                         <li ui-sref-active="active">
                             <a ui-sref="audits" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-bell"></span>&nbsp;
                                 <span data-translate="global.menu.admin.audits">Audits</span>
                             </a>
                         </li>
+                        <!--日志-->
                         <li ui-sref-active="active">
                             <a ui-sref="logs" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-tasks"></span>&nbsp;
                                 <span data-translate="global.menu.admin.logs">Logs</span>
                             </a>
                         </li>
+                        <!--API-->
                         <li ng-show="vm.swaggerEnabled" ui-sref-active="active">
                             <a ui-sref="docs" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-book"></span>&nbsp;
@@ -136,6 +165,7 @@
                             </a>
                         </li>
                         <!-- jhipster-needle-add-element-to-admin-menu - JHipster will add entities to the admin menu here -->
+                        <!--数据库-->
                         <li ng-hide="vm.inProduction">
                             <a href='/h2-console' target="_tab" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-hdd"></span>&nbsp;
@@ -144,15 +174,27 @@
                         </li>
                     </ul>
                 </li>
+                <!--导航栏项：语言选择-->
+                <!--相关文件：
+                    components/language/language.controller.js
+                    components/language/language.filter.js
+                    layouts/navbar/active-menu.directive.js
+                -->
                 <li ui-sref-active="active" uib-dropdown class="dropdown pointer" ng-controller="JhiLanguageController as languageVm">
+                    <!--如果有多余一种语言-->
+                    <!--可点击的语言项-->
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" ng-if="languageVm.languages.length > 1">
                         <span>
-                            <span class="glyphicon glyphicon-flag"></span>
-                            <span class="hidden-sm" data-translate="global.menu.language">Language</span>
-                            <b class="caret"></b>
+                            <span class="glyphicon glyphicon-flag"></span><!--小旗图标-->
+                            <span class="hidden-sm" data-translate="global.menu.language">Language</span><!--语言-->
+                            <b class="caret"></b><!--下拉三角-->
                         </span>
                     </a>
+                    <!--如果有多余一种语言-->
+                    <!--下拉列表-->
                     <ul class="dropdown-menu" uib-dropdown-menu ng-if="languageVm.languages.length > 1">
+                        <!--隔离域，有属性：active-menu-->
+                        <!--用所有语言的列表重复-->
                         <li active-menu="{{language}}" ng-repeat="language in languageVm.languages">
                             <a href="" ng-click="languageVm.changeLanguage(language);vm.collapseNavbar();">{{language | findLanguageFromKey}}</a>
                         </li>

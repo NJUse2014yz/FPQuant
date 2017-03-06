@@ -21,12 +21,13 @@
 
         function open () {
             if (modalInstance !== null) return;
+            /*弹出模态窗口*/
             modalInstance = $uibModal.open({
                 animation: true,
-                templateUrl: 'app/components/login/login.html',
-                controller: 'LoginController',
-                controllerAs: 'vm',
-                resolve: {
+                templateUrl: 'app/components/login/login.html',/*模板*/
+                controller: 'LoginController',/*控制器*/
+                controllerAs: 'vm',/*控制器别名*/
+                resolve: {/*解析依赖*/
                     translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
                         $translatePartialLoader.addPart('login');
                         return $translate.refresh();
