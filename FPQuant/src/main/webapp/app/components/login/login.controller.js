@@ -5,11 +5,6 @@
         .module('fpQuantApp')
         .controller('LoginController', LoginController);
 
-    /*相关文件：
-      services/auth/auth.service.js
-      account/register/register.state.js
-      account/reset/reset.request.state.js
-     */
     LoginController.$inject = ['$rootScope', '$state', '$timeout', 'Auth', '$uibModalInstance'];
 
     function LoginController ($rootScope, $state, $timeout, Auth, $uibModalInstance) {

@@ -1,0 +1,19 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "sid",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sname",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170307131437",
+    "dto": "mapstruct",
+    "service": "no",
+    "entityTableName": "stock",
+    "pagination": "no"
+}

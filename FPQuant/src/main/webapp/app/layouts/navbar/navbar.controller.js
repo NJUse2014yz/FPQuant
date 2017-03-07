@@ -7,12 +7,6 @@
 
     NavbarController.$inject = ['$state', 'Auth', 'Principal', 'ProfileService', 'LoginService'];
 
-     /*相关文件：
-     services/auth/auth.service.js
-     services/auth/principal.service.js
-     services/profiles/profile.service.js
-     components/login/login.service.js
-     */
     function NavbarController ($state, Auth, Principal, ProfileService, LoginService) {
         var vm = this;
 
@@ -41,12 +35,10 @@
             $state.go('home');
         }
 
-        // 打开导航栏
         function toggleNavbar() {
             vm.isNavbarCollapsed = !vm.isNavbarCollapsed;
         }
 
-        // 关闭导航栏
         function collapseNavbar() {
             vm.isNavbarCollapsed = true;
         }

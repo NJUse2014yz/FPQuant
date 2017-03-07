@@ -88,7 +88,7 @@ jhipster:
     security:
         remember-me:
             # security key (this key should be unique for your application, and kept secret)
-            key: be3ee993a9aa1df4a7b346fe907ea408d22bf6be
+            key: 4b0a277be99a0671e248655c5a914af55f2d8a2b
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: FPQuant@localhost
         base-url: http://my-server-url-to-change # Modify according to your server's URL

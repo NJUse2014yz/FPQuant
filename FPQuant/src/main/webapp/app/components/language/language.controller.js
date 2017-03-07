@@ -5,10 +5,6 @@
         .module('fpQuantApp')
         .controller('JhiLanguageController', JhiLanguageController);
 
-    /*相关文件：
-      components/language/language.service.js
-
-    */
     JhiLanguageController.$inject = ['$translate', 'JhiLanguageService', 'tmhDynamicLocale'];
 
     function JhiLanguageController ($translate, JhiLanguageService, tmhDynamicLocale) {

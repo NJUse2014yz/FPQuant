@@ -22,12 +22,8 @@
     <!--[if lt IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!--丝带-->
     <page-ribbon></page-ribbon>
-    <!--导航栏，路由挂载点，应用加载时防止闪烁-->
-    <!--相关文件：app.state.js-->
     <div ui-view="navbar" ng-cloak></div>
-    <!--正文-->
     <div class="container">
         <div class="well" ui-view="content">
             <!-- Angular views -->
@@ -97,6 +93,12 @@
     <script src="app/layouts/error/error.state.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
+    <script src="app/entities/stock/stock-dialog.controller.js"></script>
+    <script src="app/entities/stock/stock-detail.controller.js"></script>
+    <script src="app/entities/stock/stock-delete-dialog.controller.js"></script>
+    <script src="app/entities/stock/stock.state.js"></script>
+    <script src="app/entities/stock/stock.service.js"></script>
+    <script src="app/entities/stock/stock.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
@@ -161,10 +163,6 @@
     <script src="app/admin/audits/audits.service.js"></script>
     <script src="app/admin/audits/audits.controller.js"></script>
     <script src="app/admin/admin.state.js"></script>
-    <script src="app/account/social/social-register.controller.js"></script>
-    <script src="app/account/social/social.state.js"></script>
-    <script src="app/account/social/social.service.js"></script>
-    <script src="app/account/social/directive/social.directive.js"></script>
     <script src="app/account/settings/settings.state.js"></script>
     <script src="app/account/settings/settings.controller.js"></script>
     <script src="app/account/sessions/sessions.state.js"></script>
